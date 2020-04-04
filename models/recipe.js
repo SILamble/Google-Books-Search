@@ -1,28 +1,28 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const recipeSchema = new mongoose.Schema({
+const bookSchema = new mongoose.Schema({
   title: {
     type: String,
     required: true
   },
-  // url string for thumbnail image
-  thumbnail: {
+  authors:{
+    type: [String]
+  },
+  description:{
+    type: [String]
+  },
+  image: {
     type: String,
     default: ""
   },
-  // url for recipe web page - unique index
   href: {
     type: String,
     default: "",
     unique: true
-  },
-
-  // Not all ingredients, just the recommended ingredients from scraped web pages
-  // from which seed data was sourced
-  ingredients: [String]
+  }
 });
 
-const Recipe = mongoose.model("Recipe", recipeSchema);
+const Books = mongoose.model("Books", bookSchema);
 
-module.exports = Recipe;
+module.exports = books;
