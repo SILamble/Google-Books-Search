@@ -77,7 +77,7 @@ function App() {
           <Row>
             <Col size="xs-12">
               {!books.length ? (
-                <h1 className="text-center">No books to Display</h1>
+                <h4 className="text-center">No books to Display</h4>
               ) : (
                 <BooksList>
                   {books.map(book => {

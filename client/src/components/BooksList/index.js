@@ -24,6 +24,8 @@ export function BooksListItem({
             <Thumbnail src={thumbnail || imageLinks} />
           </Col>
           <Col size="xs-8 sm-9">
+            <p>Authors: {authors}</p>
+            <h4>Description:</h4><p> {description}</p>
             <h3>{title}</h3> 
             <button
               onClick={() => handleBookSave(Id)}
@@ -31,11 +33,9 @@ export function BooksListItem({
             >
               Save
             </button>
-            <p>Authors: {authors}</p>
-            <p><a rel="noreferrer noopener" target="_blank" href={href}>
+            <a rel="noreferrer noopener" target="_blank" href={href}>
               See More
-            </a></p>
-            <h4>Description:</h4><p> {description}</p>
+            </a>
           </Col>
         </Row>
       </Container>
