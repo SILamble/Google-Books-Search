@@ -31,11 +31,11 @@ As an avid reader I want to search for my favourite books, and books I want to b
 ### Screenshots
 
 Homepage
-![Homepage screenshot]()
+![Homepage screenshot](https://github.com/SILamble/Google-Books-Search/blob/master/client/public/Assets/Capture001.PNG)
 Search Results
-![search results screenshot]()
+![search results screenshot](https://github.com/SILamble/Google-Books-Search/blob/master/client/public/Assets/Capture002.PNG)
 Saved Books Page
-![Saved books page]()
+![Saved books page](https://github.com/SILamble/Google-Books-Search/blob/master/client/public/Assets/Capture003.PNG)
 
 
 ## Deployment
