@@ -16,12 +16,12 @@ if (process.env.NODE_ENV === "production") {
 
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://<dbuser>:<dbpassword>@ds159497.mlab.com:59497/heroku_tc2kw9hz",
+  process.env.MONGODB_URI || "mongodb+srv://dbUser:jdo8JVUfCASizUSq@booksdb-szaqz.mongodb.net/test?retryWrites=true&w=majority",
   { useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex: true }
 );
 
 // Use apiRoutes
-app.use("/api", apiRoutes);
+app.use(apiRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs
