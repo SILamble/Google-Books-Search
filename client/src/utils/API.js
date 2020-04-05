@@ -10,6 +10,7 @@ export default {
     .then(res =>
       res.data.items.filter(
         res =>
+          res.id &&
           res.volumeInfo.title &&
           res.volumeInfo.infoLink &&
           res.volumeInfo.authors &&

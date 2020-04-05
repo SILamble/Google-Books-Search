@@ -28,10 +28,12 @@ function App() {
 
     //save books
     const handleBookSave = id => {
-        const book = books.find(book => book.id === id);
+        const book = books.find(book => id === id);
+        console.log("This is id of book i've saved ", id)
+        console.log("This is the book i've saved ", book)
     
         API.saveBook({
-          googleId: book.id,
+          Id: book.id,
           title: book.volumeInfo.title,
           link: book.volumeInfo.infoLink,
           authors: book.volumeInfo.authors,
@@ -81,25 +83,17 @@ function App() {
                   {books.map(book => {
                     return (
                       <BooksListItem
-                        key={book.volumeInfo.title}
+                        key={book.id}
+                        Id={book.id}
                         title={book.volumeInfo.title}
                         href={book.volumeInfo.infoLink}
                         authors={book.volumeInfo.authors}
                         description={book.volumeInfo.description}
                         imageLinks={book.volumeInfo.imageLinks}
                         thumbnail={book.volumeInfo.imageLinks.thumbnail}
-                        Button={() => (
-                            <button
-                              onClick={() => handleBookSave(book.id)}
-                              className="btn btn-primary ml-2"
-                            >
-                              Save
-                            </button>
-                          )}
+                        handleBookSave = {handleBookSave}
                       />
-                      
 
-                      
                     );
                   })}
                 </BooksList>

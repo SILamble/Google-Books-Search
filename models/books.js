@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const bookSchema = new mongoose.Schema({
+const bookSchema = new Schema({
   title: {
     type: String,
     required: true
@@ -20,7 +20,11 @@ const bookSchema = new mongoose.Schema({
     type: String,
     default: "",
     unique: true
-  }
+  },
+  Id: { 
+    type: String, 
+    required: true, 
+    unique: true }
 });
 
 const Books = mongoose.model("Books", bookSchema);

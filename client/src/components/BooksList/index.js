@@ -7,12 +7,14 @@ export function BooksList({ children }) {
 }
 
 export function BooksListItem({
+  Id,
   title,
   href,
   authors,
   description,
   imageLinks,
-  thumbnail
+  thumbnail,
+  handleBookSave
 }) {
   return (
     <li className="list-group-item">
@@ -22,7 +24,13 @@ export function BooksListItem({
             <Thumbnail src={thumbnail || imageLinks} />
           </Col>
           <Col size="xs-8 sm-9">
-            <h3>{title}</h3>
+            <h3>{title}</h3> 
+            <button
+              onClick={() => handleBookSave(Id)}
+              className="btn btn-primary ml-2"
+            >
+              Save
+            </button>
             <p>Authors: {authors}</p>
             <p><a rel="noreferrer noopener" target="_blank" href={href}>
               See More
